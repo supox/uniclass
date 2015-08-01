@@ -1,3 +1,4 @@
+var path = require('path');
 var express = require('express');
 var router = express.Router();
 var PageProvider = require('../lib/models/pageProvider');
@@ -13,7 +14,8 @@ router.get(/yeda\/(\d+)/, function(req, res) {
       return
     }
     
-    res.download(descriptor['path'], encodeURI(descriptor['name']))
+    // res.download(descriptor['path'], encodeURI(descriptor['name']))
+    res.location(path.join("http://nodiclass.com", "yeda", id, encodeURI(descriptor['name'])))
   })
 });
 
