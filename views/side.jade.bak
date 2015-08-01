@@ -1,0 +1,7 @@
+p SIDE
+each id, semester in semesters
+  p.semester= semester.name
+  each page in semester["pages"]
+    p.page= page.name
+
+p END SIDE

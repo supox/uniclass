@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    .logo
+      img(src='/images/' + uni + '/' + site + '/logo.png')
+    nav
+      include ./side.jade
+    article
+      header
+       block title
+      block content

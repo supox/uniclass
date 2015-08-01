@@ -1,0 +1,10 @@
+.side
+    a.homepage(href='./') דף הבית
+  each semester in semesters
+    - if (semester.pages)
+      p.semester= semester.name
+      ul
+        each name, index in semester.pages
+          li
+            a(href=index)= name
+

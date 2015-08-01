@@ -1,0 +1,35 @@
+extends layout
+
+block title
+  h1= title
+  if homepage
+    a.header2(href=homepage) דף הבית
+
+block content
+  each table in tables
+    - var colSpan = 0; for (r in table) colSpan = Math.max(colSpan, Object.keys(table[r]).length)
+    table.mainTable
+      each row in table
+        tr
+          each col in row
+            if col.type == "text"
+              td
+                != col.text
+            else if col.type == "picture"
+              td
+                img(src=col.href)
+                a(href=col.href, title=col.target)
+                  != col.text
+            else if col.type == "link"
+              td
+                a(href=col.href, title=col.target)
+                  != col.text
+            else if col.type == "textarea"
+              td(colspan=colSpan)
+                != col.text
+            else if col.type == "header1"
+              td(colspan=colSpan, class='header1')
+                != col.text
+            else if col.type == "header2"
+              td(class='header2')
+                != col.text

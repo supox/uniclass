@@ -1,0 +1,96 @@
+body {
+  direction: rtl;
+  padding:15px;
+  font-family: Tahoma,Arial,Verdana,Tahoma;
+  font-size: 11px;
+  background:#FFFFFF;
+}
+
+a, a:link, a:visited, a:active, a:hover{
+  color: #0000aa; text-decoration: none; font-family: Tahoma,Arial,Verdana,Tahoma; font-size: 11px;
+}
+a:hover {
+  color: #ff0000;
+}
+
+.mainTable{
+  border:1px solid #DDDDDD;
+  background:#FFFFFF;
+  text-align:center;
+  width:100%;
+  border-spacing: 0px;
+  margin-top:3em;
+  margin-bottom:3em;
+}
+
+.mainTable td {
+  border-left:1px solid #DDDDDD;
+  border-right:1px solid #DDDDDD;
+  padding:3px;
+}
+
+.bigTable {
+  border: 1px solid #4682B4;
+}
+
+.header1 {
+  color: #FFFFFF;
+  background: #4682B4;
+  font-weight: bold;
+  font-size: 13px;
+}
+
+.header2 {
+  color: #000000;
+  background: #DBEAF5;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+article {
+  margin-right: 250px;
+}
+
+nav {
+  width: 250px;
+  float: right;
+}
+
+header {
+  width: 100%;
+  font-size: 2em;
+  padding: 0;
+  text-align:center;
+}
+
+header h1 {
+  margin:0px;
+}
+
+.logo {
+  float:left;
+  position:relative;
+}
+
+.side {
+}
+
+.side p {
+  padding: 0px;
+  margin: 0px;
+  font-weight: bold;
+}
+.side ul {
+  margin-top: 2px;
+  padding-right:15px;
+}
+
+.side li {
+  list-style: none;
+}
+
+.side .homepage {
+  padding-bottom:5px;
+  font-weight: bold;
+}
+
