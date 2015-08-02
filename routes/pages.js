@@ -1,4 +1,4 @@
-var path = require('path');
+var path = require('path')
 var express = require('express');
 var router = express.Router();
 var PageProvider = require('../lib/models/pageProvider');
@@ -32,7 +32,8 @@ router.get(/(\w+)\/([a-z0-9]+)\/(\d+)\/file\/(.+)/, function(req, res) {
       return
     }
 
-    res.download(descriptor['path'], encodeURI(descriptor['name']))
+    // res.download(descriptor['path'], encodeURI(descriptor['name']))
+    res.redirect("http://nodiclass.com/files/" + path.join(uni, site, page, descriptor['id'], encodeURI(descriptor['name'])))
   })
 });
 
